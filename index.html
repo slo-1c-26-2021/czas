@@ -1,0 +1,56 @@
+<html lang="pl">
+<head>
+            <meta charset="uft-8"/>
+			<title>Odliczanie czasu do wakacji</title>
+			
+			<script type= "text/javascript" >
+			function odliczanie()
+			{
+			var dzisiaj = new Date();
+			
+			var dzien = dzisiaj.getDate();
+			if(dzien<10) dzien="0"+ dzien;
+			var miesiac = dzisiaj.getMonth()+1;
+			if(miesiac<10) miesiac= "0"+ miesiac;
+			var rok = dzisiaj.getFullYear();
+			if(rok<10) rok= "0"+ rok;
+		    var milisekundy = dzisiaj.getTime();
+			
+			var end = new Date("06/25/2022");
+			var endDzien = end.getDate();
+			if(endDzien<10) endDzien="0"+ endDzien;
+			var endMiesiac = end.getMonth()+1;
+			if(endMiesiac<10) endMiesiac= "0"+ endMiesiac;
+			var endRok = end.getFullYear();
+			if(endRok<10) endRok= "0"+ endRok;
+		    var milisekundy2 = end.getTime();
+			
+		    var pozostalo = milisekundy2 - milisekundy; 
+		    var dni = Math.floor(pozostalo/86400000); 
+            var godzinydo = Math.floor(pozostalo/3600000);
+            var minutydo = Math.floor(pozostalo/60000);
+            var sekundydo = Math.floor(pozostalo/1000);
+			
+		document.getElementById("teraz").innerHTML = "Aktualna data: "+dzien+"/"+miesiac+"/"+rok; 
+		document.getElementById("wakacje").innerHTML = "Data rozpoczęcia wakacji: "+endDzien+"/"+endMiesiac+"/"+endRok;
+		document.getElementById("czas").innerHTML ="Do wakacji pozostało: "+dni+" dni, "+godzinydo+" godzin, "+minutydo+" minut i "+sekundydo+" sekund";
+		
+		setTimeout("odliczanie()", 1000);
+		}
+			</script>			
+	        <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body onload="odliczanie();">
+
+<div id="container">
+<div id="topbar">
+Odliczamy czas do rozpoczęcia wakacji
+</div>
+</br>
+<div id="teraz"></div>
+</br>
+<div id="wakacje"></div>
+</br>
+<div id="czas"></div>
+</div>
+</html>

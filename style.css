@@ -1,0 +1,46 @@
+body
+{
+background: url("plaza1.jpg");
+background-size: cover;
+font-family: Verdana;
+font-size: 24px;
+color: #0496FF;
+}
+#container
+{
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom:20px;
+	background-color: #D0F4DE;
+	margin: auto;
+    width: 1000px;
+}
+#topbar
+{
+	color: #0496FF;
+	padding: 10px;
+	font-size: 36x;
+	text-align: center;
+    border: 3px solid #0496FF;
+	letter-spacing: 3px;
+}
+#teraz
+{
+	padding: 10px;
+	text-align: center;
+    border: 3px solid #0496FF;
+}
+#wakacje
+{
+	padding: 10px;
+	text-align: center;
+    border: 3px solid #0496FF;
+}
+
+#czas
+{
+	padding: 10px;
+	text-align: center;
+    border: 3px solid #0496FF;
+}
